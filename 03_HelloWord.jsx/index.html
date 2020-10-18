@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous"></script>
+    
+   <script type="text/babel">
+
+
+       ReactDOM.render(
+           
+        <div>
+           
+            <h1> Helo Word jsx - Atividade Formulario React </h1>
+            <input type="text" placeholder='Nome de usuario' style={{'background' : 'cyan'}} />
+            
+
+            <input type="text" placeholder='Email' style={{'background' : 'blue', 'margin' : '20px'}} />
+
+
+            <input type="text" placeholder='Senha' style={{'background' : 'yellow'}} />
+            <button type="button" id='btnEnviar'>Enviar</button>
+           
+        </div>,
+        
+        document.querySelector('#root')
+
+       )
+
+   </script>
+
+    
+</body>
+</html>
