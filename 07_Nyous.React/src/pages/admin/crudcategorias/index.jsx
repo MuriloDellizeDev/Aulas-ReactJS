@@ -3,16 +3,16 @@ import Menu from '../../../components/menu';
 import Rodape from '../../../components/rodape';
 
 
-const DashBoard = () => {
+const CrudCategorias = () => {
 
-   
+
 
     return(
 
         <div>
 
             <Menu/>
-            <h1>DashBoard</h1>
+            <h1>Categorias</h1>
             <Rodape/>
 
         </div>
@@ -20,4 +20,4 @@ const DashBoard = () => {
 
 }
 
-export default DashBoard;
+export default CrudCategorias;

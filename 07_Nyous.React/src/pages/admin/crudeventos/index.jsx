@@ -2,17 +2,14 @@ import React from 'react';
 import Menu from '../../../components/menu';
 import Rodape from '../../../components/rodape';
 
-
-const DashBoard = () => {
-
-   
+const CrudEventos = () => {
 
     return(
 
         <div>
 
             <Menu/>
-            <h1>DashBoard</h1>
+            <h1>Eventos</h1>
             <Rodape/>
 
         </div>
@@ -20,4 +17,4 @@ const DashBoard = () => {
 
 }
 
-export default DashBoard;
+export default CrudEventos;
