@@ -1,11 +1,12 @@
-import React from 'react';
+import React  from 'react';
 import Menu from '../../../components/menu';
 import Rodape from '../../../components/rodape';
+import {Tab, Tabs, Form, Button, Container} from 'react-bootstrap';
 
 
 const DashBoard = () => {
 
-   
+
 
     return(
 

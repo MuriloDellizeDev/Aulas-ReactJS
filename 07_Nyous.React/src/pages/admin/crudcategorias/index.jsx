@@ -88,29 +88,37 @@ const CrudCategorias = () => {
     }
     
     const editar = (event) => {
-
         event.preventDefault();
 
-        console.log(event.target.value);
-
+        fetch(url + '/categorias/' + event.target.value, {
+            method : 'GET',
+            headers : {
+                'authorization' : 'Bearer ' + localStorage.getItem('token-nyous-tarde')
+            }
+        })
+        .then(response => response.json())
+        .then(dado => {
+            setId(dado.data.id);
+            setNome(dado.data.nome);
+            setUrlImagem(dado.data.urlImagem);
+        })
     }
 
     const remover = (event) => {
         event.preventDefault();
 
-        fetch(url + "/categorias/"  + event.target.value, { 
-            method: "DELETE",
-            headers: {
-                "authorization": "Bearer " + localStorage.getItem("token-nyous-tarde")
+        fetch(url + '/categorias/' + event.target.value,{
+            method : 'DELETE',
+            headers : {
+                'authorization' : 'Bearer ' + localStorage.getItem('token-nyous-tarde')
             }
         })
         .then(response => response.json())
-        .then(response => {
-            alert("Categoria deletado com sucesso.");
-            listar(); 
-        })
-        .catch(err => console.error(err))
+        .then(dados => {
+            alert('Categoria removida');
 
+            listar();
+        })
     }
 
     const limparCampos = () => {
@@ -165,8 +173,8 @@ const CrudCategorias = () => {
                             <td><img src ={item.urlImagem} style={{width : '50px'}}/></td>
                             <td>{item.nome}</td>
                             <td>
-                                <Button type='button' onClick={event => editar(event)} value={item.id} style={{marginRight : "30px"}} variant='warning' >Editar</Button>
-                                <Button type='button' onClick={event => remover(event)} value={item.id} variant='danger'>Remover</Button>
+                            <Button type="button" variant="warning" value={item.id} onClick={ event => editar(event)}>Editar</Button>
+                                            <Button type="button" variant="danger" value={item.id} style={{ marginLeft : '30px'}} onClick={ event => remover(event)}>Remover</Button>
                             </td>
                         </tr>
                         )

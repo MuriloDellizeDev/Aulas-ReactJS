@@ -13,7 +13,8 @@ const Home = () => {
 
             <Menu/>
 
-            <Carousel>
+
+            <Carousel >
                 <Carousel.Item>
 
                     <img 

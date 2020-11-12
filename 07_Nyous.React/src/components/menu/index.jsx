@@ -1,5 +1,5 @@
 import React from 'react';
-import{Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import{Navbar, Nav, NavDropdown, Col, Row} from 'react-bootstrap';
 import jwt_decode from 'jwt-decode';
 import { useHistory } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ const Menu = () => {
                 <Nav>
                     <Nav.Link href="/login">Login</Nav.Link>
                     <Nav.Link href="/cadastrar">Cadastrar-se</Nav.Link>
-    
+                    
                 </Nav>
     
             );
